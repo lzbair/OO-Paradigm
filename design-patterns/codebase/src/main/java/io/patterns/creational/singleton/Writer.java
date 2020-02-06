@@ -1,4 +1,4 @@
-package io.patterns.singleton;
+package io.patterns.creational.singleton;
 
 public final class Writer {
 

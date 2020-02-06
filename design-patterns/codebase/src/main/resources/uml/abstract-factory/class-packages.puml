@@ -1,0 +1,13 @@
+@startuml
+package Desktop {
+class DesktopView
+class WideImage
+class PushButton
+}
+
+package Mobile {
+class MobileView
+class NarrowImage
+class TouchButton
+}
+@enduml

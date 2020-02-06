@@ -1,0 +1,22 @@
+@startuml
+abstract class Layout
+abstract  class Image
+abstract  class Button
+
+
+class DesktopView extends Layout
+class WideImage extends Image
+class PushButton extends Button
+
+
+class MobileView extends Layout
+class NarrowImage extends Image
+class TouchButton extends Button
+
+
+class Screen
+
+Screen -- Layout: draw >
+Screen -- Image: draw >
+Screen -- Button: draw >
+@enduml

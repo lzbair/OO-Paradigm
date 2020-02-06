@@ -1,4 +1,4 @@
-package io.patterns.singlton;
+package io.patterns.creational.singlton;
 
 import org.junit.jupiter.api.Test;
 import java.lang.reflect.Constructor;
@@ -11,7 +11,7 @@ public class WriterTest {
     @Test
     public void writerCannotBeInstantiated() throws Exception {
         assertThrows(InvocationTargetException.class, () -> {
-            Class<?> w = Class.forName("io.patterns.singleton.Writer");
+            Class<?> w = Class.forName("io.patterns.creational.singleton.Writer");
             Constructor<?> constructor = w.getDeclaredConstructor();
             constructor.setAccessible(true);
             constructor.newInstance();

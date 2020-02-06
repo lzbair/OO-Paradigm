@@ -1,4 +1,4 @@
-package io.patterns.state;
+package io.patterns.behavioral.state;
 
 public class TCPEstablished implements TCPState {
 

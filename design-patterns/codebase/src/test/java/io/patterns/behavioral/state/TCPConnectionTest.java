@@ -1,4 +1,4 @@
-package io.patterns.state;
+package io.patterns.behavioral.state;
 
 
 import org.junit.jupiter.api.Assertions;
