@@ -1,4 +1,4 @@
-package io.patterns.creational.abstractfactory.solution.families.mobile;
+package io.patterns.creational.abstractfactory.problem;
 
 import io.patterns.creational.abstractfactory.Button;
 

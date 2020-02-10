@@ -1,0 +1,27 @@
+@startuml
+package Family1 {
+class ProductA1
+class ProductB1
+}
+
+package Family2 {
+class ProductA2
+class ProductB2
+}
+
+class ConcreteFactory1 extends AbstractFactory {
+  createProductA()
+  createProductB()
+}
+class ConcreteFactory2 extends AbstractFactory {
+  createProductA()
+  createProductB()
+}
+
+ConcreteFactory1 -up-> Family1 : create >
+ConcreteFactory2 -up-> Family2 : create >
+
+
+Client -down->   AbstractFactory : use >
+
+@enduml

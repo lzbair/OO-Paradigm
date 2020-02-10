@@ -1,25 +1,25 @@
 package io.patterns.creational.abstractfactory.solution.families.mobile;
 
-import io.patterns.creational.abstractfactory.solution.Button;
-import io.patterns.creational.abstractfactory.solution.Layout;
-import io.patterns.creational.abstractfactory.solution.Image;
+import io.patterns.creational.abstractfactory.Button;
+import io.patterns.creational.abstractfactory.Layout;
+import io.patterns.creational.abstractfactory.Image;
 import io.patterns.creational.abstractfactory.solution.ResponsiveKit;
 
-class MobileView implements ResponsiveKit {
+public class MobileView implements ResponsiveKit {
 
 
     @Override
     public Layout layout() {
-        return null;
+        return new Screen();
     }
 
     @Override
     public Button button() {
-        return null;
+        return new TouchButton();
     }
 
     @Override
     public Image image() {
-        return null;
+        return new NarrowImage();
     }
 }

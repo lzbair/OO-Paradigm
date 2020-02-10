@@ -1,4 +1,4 @@
-@startuml
+-@startuml
 abstract class Layout
 abstract  class Image
 abstract  class Button

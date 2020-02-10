@@ -1,11 +1,11 @@
 package io.patterns.creational.abstractfactory.solution.families.desktop;
 
-import io.patterns.creational.abstractfactory.solution.Button;
-import io.patterns.creational.abstractfactory.solution.Layout;
-import io.patterns.creational.abstractfactory.solution.Image;
+import io.patterns.creational.abstractfactory.Button;
+import io.patterns.creational.abstractfactory.Layout;
+import io.patterns.creational.abstractfactory.Image;
 import io.patterns.creational.abstractfactory.solution.ResponsiveKit;
 
-class DesktopView implements ResponsiveKit {
+public class DesktopView implements ResponsiveKit {
 
 
     @Override

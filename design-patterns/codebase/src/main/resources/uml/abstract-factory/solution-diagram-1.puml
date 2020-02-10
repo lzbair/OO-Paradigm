@@ -1,0 +1,23 @@
+@startuml
+
+class AbstractFactory {
+  createProductA()
+  createProductB()
+}
+
+AbstractFactory -right-> ProductA : create >
+AbstractFactory -left-> ProductB : create >
+
+
+class ProductA1 extends ProductA
+class ProductA2 extends ProductA
+
+
+
+class ProductB1 extends ProductB
+class ProductB2 extends ProductB
+
+
+
+
+@enduml
