@@ -11,7 +11,6 @@ public class Monitor {
 
         final boolean isMobileMode = "Mobile".equals(args[0]);
 
-
         // Need Layout
         Layout layout = null;
 

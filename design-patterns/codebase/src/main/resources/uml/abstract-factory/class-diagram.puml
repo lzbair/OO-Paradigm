@@ -4,19 +4,18 @@ abstract  class Image
 abstract  class Button
 
 
-class DesktopView extends Layout
+class Window extends Layout
 class WideImage extends Image
 class PushButton extends Button
 
 
-class MobileView extends Layout
+class Screen extends Layout
 class NarrowImage extends Image
 class TouchButton extends Button
 
 
-class Screen
 
-Screen -- Layout: draw >
-Screen -- Image: draw >
-Screen -- Button: draw >
+Monitor -- Layout: draw >
+Monitor -- Image: draw >
+Monitor -- Button: draw >
 @enduml

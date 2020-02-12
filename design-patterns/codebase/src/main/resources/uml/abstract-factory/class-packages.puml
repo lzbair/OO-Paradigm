@@ -1,12 +1,12 @@
 @startuml
 package Desktop {
-class DesktopView
+class Window
 class WideImage
 class PushButton
 }
 
 package Mobile {
-class MobileView
+class Screen
 class NarrowImage
 class TouchButton
 }

@@ -1,0 +1,28 @@
+-@startuml
+abstract class ConnectionPool {
+  abstract createConnection()
+}
+abstract class Connection {
+   send(request)
+   response receive()
+}
+
+ConnectionPool "1" *-left- "many" Connection: : contains
+
+
+class HTTPConnectionPool extends ConnectionPool {
+  createConnection()
+}
+class HTTPConnection extends Connection {
+  send(request)
+  response receive()
+}
+
+
+
+HTTPConnectionPool -left- HTTPConnection: create >
+
+
+
+
+@enduml

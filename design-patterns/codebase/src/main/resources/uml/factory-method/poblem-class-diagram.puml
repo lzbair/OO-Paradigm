@@ -1,0 +1,12 @@
+-@startuml
+
+package http {
+class HTTP
+class HTTPExchange
+}
+
+package ftp {
+class FTP
+class FTPExchange
+}
+@enduml
