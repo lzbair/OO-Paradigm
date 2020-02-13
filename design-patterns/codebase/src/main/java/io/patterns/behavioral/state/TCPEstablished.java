@@ -1,6 +1,6 @@
 package io.patterns.behavioral.state;
 
-public class TCPEstablished implements TCPState {
+class TCPEstablished implements TCPState {
 
 	
 

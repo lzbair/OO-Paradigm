@@ -1,0 +1,26 @@
+-@startuml
+PaymentApplication -right- PaymentService : use >
+interface PaymentService {
+  pay()
+}
+class PaymentProvider {
+   authorize()
+   capture()
+}
+
+note "pay() calls both authorize() & capture()" as N1
+
+class OnlinePaymentService extends PaymentService {
+  pay() {}
+}
+
+N1 -right- OnlinePaymentService
+
+
+OnlinePaymentService *-right-  PaymentProvider: part of  <
+
+
+
+
+
+@enduml
