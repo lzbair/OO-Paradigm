@@ -1,0 +1,24 @@
+-@startuml
+class PaymentApplication {
+   pay()
+}
+
+class PaymentProvider_ALFA {
+   authorize()
+   capture()
+}
+
+class PaymentProvider_BETA {
+   verify()
+   sendTrasaction()
+   complete()
+}
+
+class PaymentProvider_GAMA {
+   doPayment()
+}
+
+
+
+
+@enduml
