@@ -9,7 +9,10 @@ import java.util.List;
 public class ProgramAuditor {
     List<CodeQualityRule> codeQualityRules = new ArrayList<>();
 
-    public void run(ProgramNode program) {
-        codeQualityRules.stream().forEach(program::audit);
+    public void run(ProgramNode node) {
+        for (CodeQualityRule rule : codeQualityRules) {
+            node.audit(rule);
+        }
+        // codeQualityRules.stream().forEach(node::audit);
     }
 }
