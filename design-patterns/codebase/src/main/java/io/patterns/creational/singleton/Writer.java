@@ -2,28 +2,15 @@ package io.patterns.creational.singleton;
 
 public final class Writer {
 
-    private static final Writer INSTANCE = writer();
-
-
-    private Writer() throws IllegalAccessException {
-        if (INSTANCE != null) throw new IllegalAccessException(getClass().getName() + " Cannot be instantiated");
+    // Use a holder to defer INSTANCE initialization (lazy loading)
+    private class WriterHolder {
+        // Static declaration on nested classes is allowed since Java 17
+        private static final Writer INSTANCE = new Writer();
     }
 
-    private static Writer writer() {
-        if (INSTANCE == null) {
 
-            try {
-                return new Writer();
-            } catch (IllegalAccessException e) {
-                // The exception is not supposed to be raised at this level;
-            }
-        }
-        return INSTANCE;
-
-    }
-
-    public static Writer getInstance() {
-        return INSTANCE;
+    public static Writer instance() {
+        return WriterHolder.INSTANCE;
     }
 
     public void write() {

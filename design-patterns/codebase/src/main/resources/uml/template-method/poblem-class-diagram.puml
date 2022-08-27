@@ -1,0 +1,19 @@
+-@startuml
+
+package pizzahut {
+class PizzaHut
+class PizzaHutCooker
+}
+
+package dominos {
+class DominosPizza
+class DominosPizzaCooker
+}
+
+class PizzaCooker {
+dough()
+sauce()
+topping()
+bake()
+}
+@enduml

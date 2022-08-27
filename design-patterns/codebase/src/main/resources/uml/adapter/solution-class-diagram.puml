@@ -1,5 +1,5 @@
 -@startuml
-PaymentApplication -right- PaymentService : use >
+PaymentApplication -right- PaymentService : accepts >
 interface PaymentService {
   pay()
 }
@@ -8,13 +8,23 @@ class PaymentProvider {
    capture()
 }
 
-note "pay() calls both authorize() & capture()" as N1
+note "Target interface to which we should adapt" as N0
+note "The adapter object" as N1
+note "pay() manages both authorize() & capture()" as N2
+note "The adaptee object" as N3
+
 
 class OnlinePaymentService extends PaymentService {
   pay() {}
 }
 
+N0 -left- PaymentService
+
 N1 -right- OnlinePaymentService
+N2 -left- OnlinePaymentService
+N3 -left- PaymentProvider
+
+
 
 
 OnlinePaymentService *-right-  PaymentProvider: part of  <
