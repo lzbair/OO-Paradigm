@@ -1,6 +1,4 @@
-package io.patterns.structural;
-
-import java.util.List;
+package io.patterns.structural.adapter;
 
 public class PaymentApplication {
 

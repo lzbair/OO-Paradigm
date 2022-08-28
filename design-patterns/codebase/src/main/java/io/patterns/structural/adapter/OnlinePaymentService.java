@@ -1,4 +1,4 @@
-package io.patterns.structural;
+package io.patterns.structural.adapter;
 
 public class OnlinePaymentService implements PaymentService {
     private final PaymentProvider paymentProvider;

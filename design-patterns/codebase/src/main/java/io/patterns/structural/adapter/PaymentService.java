@@ -1,4 +1,4 @@
-package io.patterns.structural;
+package io.patterns.structural.adapter;
 
 public interface PaymentService {
     void doPay(Price total);
