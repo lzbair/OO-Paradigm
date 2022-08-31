@@ -1,0 +1,21 @@
+-@startuml
+
+interface CloudService{}
+abstract class MachineCloudService{}
+abstract class StorageCloudService{}
+abstract class NetworkCloudService{}
+
+
+
+MachineCloudService -up-|> CloudService
+StorageCloudService -up-|> CloudService
+NetworkCloudService -up-|> CloudService
+
+
+AWSMachineCloudService -up-|> MachineCloudService
+AWSStorageCloudService -up-|> StorageCloudService
+AWSNetworkCloudService -up-|> NetworkCloudService
+
+
+
+@enduml

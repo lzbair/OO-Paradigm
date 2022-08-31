@@ -1,0 +1,33 @@
+-@startuml
+node Bridge {
+abstract class CloudResource{
+  CloudProvider provider
+}
+
+interface CloudProvider{
+allocateStorage()
+freeStorage()
+
+acquireMachine()
+releaseMachine()
+}
+
+CloudResource  *-right-  CloudProvider : > contains one instance
+}
+package Abstractions {
+class MachineCloudResource{}
+class StorageCloudResource{}
+
+MachineCloudResource -up-|> CloudResource
+StorageCloudResource -up-|> CloudResource
+}
+
+
+package Implementors {
+class AWSCloudProvider
+class GCPCloudProvider
+
+AWSCloudProvider -up-|> CloudProvider
+GCPCloudProvider -up-|> CloudProvider
+}
+@enduml
