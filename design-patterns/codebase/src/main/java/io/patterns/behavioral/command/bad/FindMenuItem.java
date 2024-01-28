@@ -6,7 +6,7 @@ public class FindMenuItem implements MenuItem{
 
 
     @Override
-    public void execute(Document document) {
+    public void execute(Window document) {
         try (Scanner sc = new Scanner(System.in)) {
             document.find(sc.nextLine());
         }

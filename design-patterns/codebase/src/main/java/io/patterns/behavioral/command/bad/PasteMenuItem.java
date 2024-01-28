@@ -3,7 +3,7 @@ package io.patterns.behavioral.command.bad;
 public class PasteMenuItem implements MenuItem {
 
     @Override
-    public void execute(Document document) {
+    public void execute(Window document) {
         System.out.println(Clipboard.paste());
     }
 

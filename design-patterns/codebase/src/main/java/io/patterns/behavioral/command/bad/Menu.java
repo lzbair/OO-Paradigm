@@ -22,7 +22,7 @@ public class Menu {
         item.ifPresent(it -> it.execute(null));
     }
 
-    public void doFind(Document document) {
+    public void doFind(Window document) {
         Optional<MenuItem> item = items.stream().filter(it -> it instanceof FindMenuItem).findFirst();
         item.ifPresent(it -> it.execute(document));
     }
